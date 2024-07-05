@@ -1,14 +1,13 @@
 import streamlit as st
 import base64
-import plotly.io as pio
-from streamlit_option_menu import option_menu
 import numpy as np
 from r3_fetchsql import data
 import pandas as pd
-import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import json
+from streamlit_option_menu import option_menu
+import plotly.express as px
 
 
 
