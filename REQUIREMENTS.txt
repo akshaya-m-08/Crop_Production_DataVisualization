@@ -3,7 +3,7 @@ streamlit-option-menu==0.3.13
 pandas<=2.2.2
 seaborn<=0.13.2
 matplotlib<=3.9.0
-plotly==5.22.0
+plotly
 numpy<=1.26.4
 
 
