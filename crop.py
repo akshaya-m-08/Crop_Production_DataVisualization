@@ -19,116 +19,116 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for the sidebar and main content
-custom_css = """
-<style>
-.image-container img {
-    height: 30%;
-    width: 100%; 
-}
-.side-image-container img {
-    height: 100px;
-    width: 100px;  
-}
-[data-testid="stSidebar"] {
-    background-color: #0A5933; 
-    text-align: center;
-}
-[data-testid="stMetric"] 
-{
-    background-color: #099F57; 
-    text-align: center;
-    padding: 5px 0;
-    font-weight: bold;
-    border-radius: 15px;
-    color: white; 
-    width: auto;
-}
-[data-testid="stMetricValue"] {
-    font-size: 30px;
-}
+# # Custom CSS for the sidebar and main content
+# custom_css = """
+# <style>
+# .image-container img {
+#     height: 30%;
+#     width: 100%; 
+# }
+# .side-image-container img {
+#     height: 100px;
+#     width: 100px;  
+# }
+# [data-testid="stSidebar"] {
+#     background-color: #0A5933; 
+#     text-align: center;
+# }
+# [data-testid="stMetric"] 
+# {
+#     background-color: #099F57; 
+#     text-align: center;
+#     padding: 5px 0;
+#     font-weight: bold;
+#     border-radius: 15px;
+#     color: white; 
+#     width: auto;
+# }
+# [data-testid="stMetricValue"] {
+#     font-size: 30px;
+# }
 
-[data-testid="stTable"] {
-    width: auto;
-    height: 500px;
-    overflow-y: auto;
-    background-color: #099F57;
-    border-radius: 8px;  
-    font-size: 19px;
-    color: white;
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-}
-[data-testid="stTable"] thead th {
-    font-size: 20px;
-    text-align: center !important; 
-    font-weight: bold;
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-}
+# [data-testid="stTable"] {
+#     width: auto;
+#     height: 500px;
+#     overflow-y: auto;
+#     background-color: #099F57;
+#     border-radius: 8px;  
+#     font-size: 19px;
+#     color: white;
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+# }
+# [data-testid="stTable"] thead th {
+#     font-size: 20px;
+#     text-align: center !important; 
+#     font-weight: bold;
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+# }
 
-[data-testid="stTable"] tbody td {
-    text-align: left !important; 
-    font-size: 20px;
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-}
+# [data-testid="stTable"] tbody td {
+#     text-align: left !important; 
+#     font-size: 20px;
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+# }
 
-[data-testid="stTable"] table tbody td{
-    color: white;
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-}
-[data-testid="stTable"] table th,
-[data-testid="stTable"] table tbody td:first-child {
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-    color: white; 
-}
-[data-testid="stTable"] table tbody td:nth-child(odd) {
-    text-align: right !important;
-    color: #0A5933; !important;
-    font-weight: bold !important;
-    font-size: 22px !important;
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
+# [data-testid="stTable"] table tbody td{
+#     color: white;
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+# }
+# [data-testid="stTable"] table th,
+# [data-testid="stTable"] table tbody td:first-child {
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+#     color: white; 
+# }
+# [data-testid="stTable"] table tbody td:nth-child(odd) {
+#     text-align: right !important;
+#     color: #0A5933; !important;
+#     font-weight: bold !important;
+#     font-size: 22px !important;
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
 
-}
-[data-testid="stTable"] table tbody td:first-child {
-    text-align: left !important;
-    color: white!important;
-    font-weight: italic !important;
-    font-size: 22px !important;
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-}
-[data-testid="stTable"] tbody tr:nth-child(even),
-[data-testid="stTable"] tbody tr:nth-child(odd) {
-    background-color: #099F57; 
-    border-right: none; 
-    border-left: none; 
-    border-top: none; 
-    border-bottom: none; 
-}
-</style>
-"""
+# }
+# [data-testid="stTable"] table tbody td:first-child {
+#     text-align: left !important;
+#     color: white!important;
+#     font-weight: italic !important;
+#     font-size: 22px !important;
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+# }
+# [data-testid="stTable"] tbody tr:nth-child(even),
+# [data-testid="stTable"] tbody tr:nth-child(odd) {
+#     background-color: #099F57; 
+#     border-right: none; 
+#     border-left: none; 
+#     border-top: none; 
+#     border-bottom: none; 
+# }
+# </style>
+# """
 
-# Embed custom CSS into the Streamlit app
-st.markdown(custom_css, unsafe_allow_html=True)
+# # Embed custom CSS into the Streamlit app
+# st.markdown(custom_css, unsafe_allow_html=True)
 
 # Function to get the base64 encoded string of the image
 def get_image_base64(image_path):
