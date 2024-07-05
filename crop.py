@@ -1,6 +1,5 @@
 import streamlit as st
 import base64
-import plotly.io as pio
 from streamlit_option_menu import option_menu
 import numpy as np
 from r3_fetchsql import data
@@ -10,8 +9,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import json
 
-# Set default Plotly template
-pio.templates.default = None
+
 
 # Set page configuration as the first Streamlit command
 st.set_page_config(
