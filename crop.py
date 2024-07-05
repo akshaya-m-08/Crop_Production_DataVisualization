@@ -1,6 +1,6 @@
 import streamlit as st
 import base64
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 import numpy as np
 from r3_fetchsql import data
 import pandas as pd
@@ -154,20 +154,30 @@ with st.sidebar:
 
     st.write("")
     st.write("")
-    selected = option_menu(
-        menu_title=f"{view}",
-        options=["Home","Cropscape Overview", "Harvest Chronicles",  "Climate Harvest", "Cropfolio Insights", "Growth Nexus"],
-        icons=["house-heart", "flower1","calendar3", "sun-fill","minecart-loaded","graph-up-arrow"],
-        menu_icon="cast",
-        default_index=0,
-        orientation="vertical",
-        styles={
-            "container": {"background-color": "#13472E"},
-            "icon": {"color": "white", "font-size": "16px"},
-            "nav-link": {"color": "white", "font-size": "16px", "text-align": "left", "margin": "0px", "--hover-color": "#099F57"},
-            "nav-link-selected": {"background-color": "#099F57"},
-        }
+    # Define the options for the menu
+    menu_options = ["Home", "Cropscape Overview", "Harvest Chronicles", "Climate Harvest", "Cropfolio Insights", "Growth Nexus"]
+    menu_icons = ["🏠", "🌸", "📅", "☀️", "🚜", "📈"]
+
+    # Create a selectbox for the menu
+    selected = st.selectbox(
+        "Menu",
+        options=[f"{icon} {option}" for icon, option in zip(menu_icons, menu_options)],
+        format_func=lambda x: x.split(" ", 1)[1]  # Display only the option text without the icon
     )
+    # selected = option_menu(
+    #     menu_title=f"{view}",
+    #     options=["Home","Cropscape Overview", "Harvest Chronicles",  "Climate Harvest", "Cropfolio Insights", "Growth Nexus"],
+    #     icons=["house-heart", "flower1","calendar3", "sun-fill","minecart-loaded","graph-up-arrow"],
+    #     menu_icon="cast",
+    #     default_index=0,
+    #     orientation="vertical",
+    #     styles={
+    #         "container": {"background-color": "#13472E"},
+    #         "icon": {"color": "white", "font-size": "16px"},
+    #         "nav-link": {"color": "white", "font-size": "16px", "text-align": "left", "margin": "0px", "--hover-color": "#099F57"},
+    #         "nav-link-selected": {"background-color": "#099F57"},
+    #     }
+    # )
     
 if selected == "Home":    
     # Base64 encode the image for the main content
