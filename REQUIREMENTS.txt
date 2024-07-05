@@ -8,7 +8,7 @@
 streamlit
 streamlit_option_menu
 numpy
-plotly
+plotly.io
 r3_fetchsql
 
 
